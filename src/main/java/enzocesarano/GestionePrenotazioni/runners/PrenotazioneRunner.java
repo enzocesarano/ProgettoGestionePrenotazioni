@@ -49,6 +49,18 @@ public class PrenotazioneRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+// **********************************************************************************************************************************************************************
+//
+//        NON AVEVO FATTO I CONTROLLI SULLA CREAZIONE DELL'UTENTE E DEGLI EDIFICI.
+//
+//        utenteService.creaUtente("jorah.mormont", "Jorah Mormont", "jorah@gmail.com");
+//        edificioService.creaEdificio("Nido dell'Aquila", "Via della Rocca 1", "Vallate");
+//
+//        QUESTI DUE ESEMPI CONTROLLANO ALLA CREAZIONE SE ESISTE GIA' UNA MAIL E/O UN USERNAME (CASO UTENTE) E SE ESISTE GIA' UNA VIA (CASO EDIFICIO)
+//
+// **********************************************************************************************************************************************************************
+
+
         // Creo UTENTE, EDIFICIO E POSTAZIONE ********************************************
 
 //        Utente vincenzo = utenteRepository.save(new Utente("enzo.cesarano", "Vincenzo Cesarano", "vinc.cesarano@gmail.com");
@@ -78,7 +90,7 @@ public class PrenotazioneRunner implements CommandLineRunner {
 //        Edificio grandeTempio = edificioRepository.save(new Edificio("Grande Tempio", "Largo dei Sette 5", "King's Landing"));
 //        Edificio casaBaratheon = edificioRepository.save(new Edificio("Forte del Castigo", "Via dei Baratheon 6", "Stormlands"));
 //        Edificio casaTargaryen = edificioRepository.save(new Edificio("Dragonstone", "Piazza dei Draghi 7", "Dragonstone"));
-
+//
 //        String[] nomiEdifici = {
 //                "Nido dell'Aquila",
 //                "Grande Inverno",
@@ -142,19 +154,7 @@ public class PrenotazioneRunner implements CommandLineRunner {
 //        } // Errore nella creazione della prenotazione: Postazione già prenotata per questa data
 
 
-// **********************************************************************************************************************************************************************
-//
-//        NON AVEVO FATTO I CONTROLLI SULLA CREAZIONE DELL'UTENTE E DEGLI EDIFICI.
-//
-//        utenteService.creaUtente("jorah.mormont", "Jorah Mormont", "jorah@gmail.com");
-//        edificioService.creaEdificio("Nido dell'Aquila", "Via della Rocca 1", "Vallate");
-//
-//        QUESTI DUE ESEMPI CONTROLLANO ALLA CREAZIONE SE ESISTE GIA' UNA MAIL E/O UN USERNAME (CASO UTENTE) E SE ESISTE GIA' UNA VIA (CASO EDIFICIO)
-//
-// **********************************************************************************************************************************************************************
-
-
-        //  CREAZIONE DI UNA PRENOTAZIONE TRAMITE SCANNER
+        //  CREAZIONE DI UNA PRENOTAZIONE TRAMITE SCANNER DOPO LA SISTEMAZIONE DEI SERVICE
 
         Scanner scanner = new Scanner(System.in);
 
