@@ -6,8 +6,10 @@ import enzocesarano.GestionePrenotazioni.entities.Utente;
 import enzocesarano.GestionePrenotazioni.repository.EdificioRepository;
 import enzocesarano.GestionePrenotazioni.repository.PostazioneRepository;
 import enzocesarano.GestionePrenotazioni.repository.UtenteRepository;
+import enzocesarano.GestionePrenotazioni.service.EdificioService;
 import enzocesarano.GestionePrenotazioni.service.PostazioneService;
 import enzocesarano.GestionePrenotazioni.service.PrenotazioneService;
+import enzocesarano.GestionePrenotazioni.service.UtenteService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -37,6 +39,12 @@ public class PrenotazioneRunner implements CommandLineRunner {
 
     @Autowired
     private EdificioRepository edificioRepository;
+
+    @Autowired
+    private UtenteService utenteService;
+
+    @Autowired
+    private EdificioService edificioService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -131,9 +139,19 @@ public class PrenotazioneRunner implements CommandLineRunner {
 //            System.out.println("Errore nella creazione della prenotazione: " + e.getMessage());
 //        } catch (EntityNotFoundException e) {
 //            System.out.println("Errore: " + e.getMessage());
-//        }
+//        } // Errore nella creazione della prenotazione: Postazione già prenotata per questa data
 
-        // Errore nella creazione della prenotazione: Postazione già prenotata per questa data
+
+// **********************************************************************************************************************************************************************
+//
+//        NON AVEVO FATTO I CONTROLLI SULLA CREAZIONE DELL'UTENTE E DEGLI EDIFICI.
+//
+//        utenteService.creaUtente("jorah.mormont", "Jorah Mormont", "jorah@gmail.com");
+//        edificioService.creaEdificio("Nido dell'Aquila", "Via della Rocca 1", "Vallate");
+//
+//        QUESTI DUE ESEMPI CONTROLLANO ALLA CREAZIONE SE ESISTE GIA' UNA MAIL E/O UN USERNAME (CASO UTENTE) E SE ESISTE GIA' UNA VIA (CASO EDIFICIO)
+//
+// **********************************************************************************************************************************************************************
 
 
         //  CREAZIONE DI UNA PRENOTAZIONE TRAMITE SCANNER
@@ -191,5 +209,7 @@ public class PrenotazioneRunner implements CommandLineRunner {
         } finally {
             scanner.close();
         }
+
+
     }
 }
