@@ -41,7 +41,7 @@ public class PrenotazioneRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        // Creo UTENTE, EDIFICIO E POSTAZIONE **********************************************
+        // Creo UTENTE, EDIFICIO E POSTAZIONE ********************************************
 
 //        Utente vincenzo = utenteRepository.save(new Utente("enzo.cesarano", "Vincenzo Cesarano", "vinc.cesarano@gmail.com");
 //        Utente daenerys = utenteRepository.save(new Utente("daenerys.targaryen", "Daenerys Targaryen", "daenerys@gmail.com"));
@@ -134,6 +134,7 @@ public class PrenotazioneRunner implements CommandLineRunner {
 //        }
 
         // Errore nella creazione della prenotazione: Postazione già prenotata per questa data
+
 
         //  CREAZIONE DI UNA PRENOTAZIONE TRAMITE SCANNER
 
