@@ -27,7 +27,7 @@ public class PrenotazioneService {
     private UtenteRepository utenteRepository;
 
     public List<Postazione> cercaPostazioni(TipoPostazione tipo, String citta) {
-        return postazioneRepository.findByTipoAndEdificio_Citta(tipo, citta);
+        return postazioneRepository.findByTipoAndEdificioCitta(tipo, citta);
     }
 
     public void creaPrenotazione(Utente utente1, Postazione posizione1, LocalDate data) {
